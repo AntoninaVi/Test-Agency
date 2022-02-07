@@ -481,8 +481,6 @@ html {
     padding-top: 80px;
     padding-bottom: 80px;
 }
-.results {
-}
 .results__title {
     text-align: center;
     font-weight: 900;
@@ -530,9 +528,6 @@ html {
     border-radius: 12px;
     padding-left: 26px;
     padding-right: 26px;
-}
-.clients__icon:nth-child(5),
-.clients__icon:nth-child(10) {
 }
 
 .clients__number {
@@ -687,7 +682,7 @@ textarea {
     padding: 18px 0 18px 32px;
     max-width: 560px;
 }
-#submit {
+.button-form {
     font-weight: bold;
     line-height: 24px;
     background: #ffffff;
@@ -696,11 +691,17 @@ textarea {
     cursor: pointer;
     padding: 18px 42px;
     margin-top: 20px;
+    border: none;
+    text-align: center;
 }
-#submit:after {
+.button-form::after {
     content: "→";
+    width: 12px;
+    height: 7px;
     color: #376fff;
+    margin-left: 24px;
 }
+
 input[type="checkbox"] {
     display: none;
 }
@@ -730,6 +731,6 @@ input[type="checkbox"]:checked + .pseudo-checkbox::before {
 .pseudo-checkbox a {
     color: #c1d3de;
 }
-.copyright{
-    color: #8B9BAB;
+.copyright {
+    color: #8b9bab;
 }
