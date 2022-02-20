@@ -36,6 +36,12 @@ html {
 }
 
 /*Header*/
+.header__nav .header-nav__item,
+.header__nav .button__header,
+.header__nav .button-lv,
+.burger__btn{
+    display: none;
+}
 .header-wrapper {
     background: rgba(36, 42, 86, 0.7);
     background-image: url(/img/bg-1.jpg);
@@ -60,6 +66,7 @@ html {
     display: flex;
     align-items: center;
 }
+
 .nav {
     margin-right: 60px;
 }
@@ -228,6 +235,9 @@ html {
     margin-bottom: 40px;
 }
 /*Servise lists*/
+.adaptive-list {
+    display: none;
+}
 .service__list-wrapper {
     background: url(tiny_grid_@2X.png), #edf4fa;
     padding-top: 80px;

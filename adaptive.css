@@ -1,15 +1,88 @@
 @media screen and (max-width: 320px), (max-width: 480px), (max-width: 768px) {
     .container {
-        max-width: 100%;
+        max-width: 90%;
         padding-left: 16px;
         padding-right: 16px;
     }
 }
 @media screen and (max-width: 320px), (max-width: 480px), (max-width: 768px) {
-    .header__content {
+    .header {
+        background-color: #ffffff;
+    }
+    .header__content nav,
+    .button__header,
+    .button-lv {
         display: none;
     }
+    .header .logo {
+        filter: opacity(0.5) drop-shadow(0 0 0 rgba(36, 42, 86, 1));
+        margin-left: 30px;
+        z-index: 3;
+        position: relative;
+    }
+    .burger__btn {
+        outline: 0;
+        border: 0;
+        background-color: transparent;
+        width: 32px;
+        height: 22px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        cursor: pointer;
+        margin-right: 30px;
+        z-index: 10;
+    }
+    .burger__btn::before,
+    .burger__btn i,
+    .burger__btn::after {
+        content: "";
+        width: 100%;
+        height: 2px;
+        background-color: #4b4c5a;
+    }
+    .burger__btn.active i {
+        display: none;
+    }
+    .burger__btn.active::before {
+        position: absolute;
+        top: 9px;
+        transform: rotate(45deg);
+    }
+    .burger__btn.active::after {
+        position: absolute;
+        top: 9px;
+        transform: rotate(-45deg);
+    }
+    .header__nav {
+        display: none;
+        background: #ffffff;
+        width: 100%;
+        transition: all 0.3s ease 0s;
+    }
+    .header__nav.active {
+        width: 100%;
+    }
+    .header-nav__item {
+        color: #8b9bab;
+        display: grid;
+        justify-content: left;
+        margin-bottom: 32px;
+    }
+    .header__nav .button__header{
+        display: inline-block;
+        color: #376FFF;
+        border: 1px solid #376FFF;
+        margin-bottom: 24px;
+    }
+    .header__nav .button-lv{
+        display: block;
+        border: 1px solid #376FFF;
+        color: #8B9BAB;
+    }
 }
+
 @media screen and (max-width: 320px), (max-width: 480px), (max-width: 768px) {
     .header__title {
         font-size: 32px;
@@ -30,6 +103,7 @@
         background-size: cover;
     }
 }
+
 @media screen and (max-width: 320px), (max-width: 480px), (max-width: 768px) {
     .main-page {
         display: block;
@@ -37,8 +111,7 @@
     }
 }
 @media screen and (max-width: 320px), (max-width: 480px), (max-width: 768px) {
-    .main-content {
-    }
+  
 }
 @media screen and (max-width: 320px), (max-width: 480px), (max-width: 768px) {
     .main__img {
@@ -104,29 +177,78 @@
     .button--list {
         max-width: 100%;
     }
+    .list-all {
+        display: none;
+    }
+    .list {
+        display: none;
+    }
+    .note-price {
+        display: none;
+    }
+    .adaptive-list .list-all {
+        display: block;
+        margin-bottom: 10px;
+    }
+    .adaptive-list .list-all:last-child {
+        margin-bottom: 20px;
+    }
+
+    .adaptive-list {
+        display: block;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .adaptive-list .note-price {
+        display: block;
+        max-width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .adaptive-list .price {
+        font-size: 16px;
+        line-height: 26px;
+        padding: 0 20px 20px 20px;
+    }
+    .adaptive-list .img-price {
+        padding: 21px 21px 11px 21px;
+    }
+    .adaptive-list .list-two p {
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 16px;
+        padding-left: 20px;
+    }
+    .adaptive-list .list-two__subscription p {
+        padding-right: 10px;
+    }
+
+    .adaptive-list .list-two__subscription {
+        display: flex;
+    }
+    .adaptive-list .list-check {
+        display: flex;
+        padding-left: 0;
+    }
+    .adaptive-list .list-check {
+    }
+    .adaptive-list .list-title {
+        font-size: 18px;
+        line-height: 130%;
+        margin-bottom: 8px;
+    }
+    .adaptive-list .list-info {
+        font-size: 16px;
+        line-height: 26px;
+    }
 }
+
 @media screen and (max-width: 320px), (max-width: 480px), (max-width: 768px) {
     .service__title {
         font-size: 28px;
         line-height: 36px;
         max-width: 80%;
-    }
-}
-@media screen and (max-width: 320px), (max-width: 480px), (max-width: 768px) {
-    .note-price {
-        display: flex;
-        flex-direction: column;
-        max-width: 60%;
-        margin-right: auto;
-        margin-left: auto;
-    }
-    .price {
-        font-size: 16px;
-        line-height: 26px;
-        padding: 0 20px 20px 20px;
-    }
-    .img-price {
-        padding: 21px 21px 11px 21px;
     }
 }
 
@@ -189,8 +311,9 @@
         line-height: 24px;
         color: #376fff;
         text-decoration: underline;
-        list-style-type: none;
-        text-align: left;
+        position: absolute;
+        left: 15%;
+}
     }
     .subscription-open {
         font-size: 16px;
@@ -220,10 +343,9 @@
     .slick-prev {
         left: 0;
     }
-    .slick-next {
+    .slick-next  {
         right: 0;
-    }
-    .slick-list {
+
     }
     .slick-dotted.slick-slider {
         display: block;
