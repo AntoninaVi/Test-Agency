@@ -39,7 +39,7 @@ html {
 .header__nav .header-nav__item,
 .header__nav .button__header,
 .header__nav .button-lv,
-.burger__btn{
+.burger__btn {
     display: none;
 }
 .header-wrapper {
@@ -742,7 +742,6 @@ html {
 .offers__content-item-slider {
     padding: 0px 15px;
 }
-
 .offers__content-item-slider img {
     max-width: 100%;
 }

@@ -77,16 +77,14 @@
     left: auto;
 }
 .slick-prev:before {
-    content: url(/img/arrow-slide-prev.svg)
+    content: url(/img/arrow-slide-prev.svg);
 }
 [dir="rtl"] .slick-prev:before {
     content: "";
-
 }
 
 .slick-next {
     padding-right: 16px;
-    
 }
 [dir="rtl"] .slick-next {
     right: auto;
@@ -151,13 +149,12 @@
     font-family: "slick";
     font-size: 10px;
     line-height: 20px;
-   
+
     position: absolute;
     top: 0;
     left: 0;
 
     width: 50px;
-  
 
     content: "•";
     text-align: center;

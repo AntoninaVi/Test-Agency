@@ -335,7 +335,6 @@
     .offer-slide {
         padding: 40px 16px 40px 16px;
     }
-}
 
 @media screen and (max-width: 320px), (max-width: 480px), (max-width: 768px) {
     .slick-arrow {
